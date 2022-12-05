@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
+import Counter from './components/Counter';
+import TestProps from './components/TestProps';
+import NewComponent from './components/NewCompo';
+
 
 function App() {
+  const [name,setName] = useState('BeAlly')
+  function updateState(){
+    const updatedState = setName('Updated-BeAlly')
+    return(
+      <h1>{updatedState}</h1>
+    )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 style={{color:'red'}}>React JS</h1>
+      <Counter name={'Abdurraheman'} value = {'abdurrahman.bcs@gamil.com '} phone={'9142345566'}/>
+      <TestProps test={'Test1'} email={'Test1@gmail.com'}/>
+      <TestProps test={'Test2'} email={'Test2@gmail.com'}/>
+      <TestProps test={'Test3'} email={'Test3@gmail.com'}/>
+      <TestProps test={'Test4'} email={'Test4@gmail.com'}/>
+      <TestProps test={'Test5'} email={'Test5@gmail.com'}/>
+      <NewComponent name={name} />
+      <button className='btn btn-secondary btn-sm m-3' onClick={updateState}>NewCom Update</button>
     </div>
+    
   );
+  
 }
 
 export default App;
