@@ -3,6 +3,7 @@ import './App.css';
 import Counter from './components/Counter';
 import TestProps from './components/TestProps';
 import NewComponent from './components/NewCompo';
+import BeAlly from "./components/BeAlly";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <TestProps test={'Test5'} email={'Test5@gmail.com'}/>
       <NewComponent name={name} />
       <button className='btn btn-secondary btn-sm m-3' onClick={updateState}>NewCom Update</button>
+      <BeAlly clientName='TeaLeta' country='France' />
     </div>
     
   );

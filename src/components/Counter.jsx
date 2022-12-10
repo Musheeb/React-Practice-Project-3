@@ -14,7 +14,7 @@ function Counter(props) {
     //     )
     // }
     const [data, setState] = useState(4)
-    console.log(props)
+    // console.log(props)
     
     function updateData(){
         setState('This is new updated data')
